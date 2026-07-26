@@ -1,0 +1,215 @@
+/* ---------------------------------------------------------------------------
+   Delft Writing Group - stylesheet
+   Single column layout, paper-white background, serif typography.
+   --------------------------------------------------------------------------- */
+
+/* --- Design tokens ------------------------------------------------------- */
+
+:root {
+  --paper: #fbf9f4;
+  --ink: #1c1a17;
+  --ink-soft: #57524a;
+  --rule: #ddd6c8;
+
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Palladio,
+                "Book Antiqua", Georgia, "Times New Roman", serif;
+
+  --measure: 34rem;      /* comfortable reading width */
+  --gap: 3rem;           /* vertical rhythm between blocks */
+}
+
+/* --- Reset --------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p,
+figure {
+  margin: 0;
+}
+
+img,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+/* Must win over the `display: block` above, so `hidden` keeps working. */
+[hidden] {
+  display: none !important;
+}
+
+/* --- Base ---------------------------------------------------------------- */
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* --- Header -------------------------------------------------------------- */
+
+.site-header {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 4.5rem 0 0;
+  text-align: center;
+}
+
+.site-title {
+  font-size: clamp(2.1rem, 7vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: 0.005em;
+}
+
+.site-tagline {
+  margin-top: 0.9rem;
+  color: var(--ink-soft);
+  font-size: 1.0625rem;
+  font-style: italic;
+}
+
+.site-header::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 1px;
+  margin: 2.25rem auto 0;
+  background-color: var(--rule);
+}
+
+/* --- Layout -------------------------------------------------------------- */
+
+.content {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+.content > * + * {
+  margin-top: var(--gap);
+}
+
+/* --- Hero image ---------------------------------------------------------- */
+
+.hero {
+  margin-top: var(--gap);
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+}
+
+.hero__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 3 / 2;
+  border: 1px solid var(--rule);
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  font-style: italic;
+  letter-spacing: 0.03em;
+}
+
+/* --- Text ---------------------------------------------------------------- */
+
+.prose h2 {
+  margin-top: 2.25rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.prose p + p,
+.prose h2 + p {
+  margin-top: 0.9rem;
+}
+
+.prose .lede {
+  font-size: 1.1875rem;
+}
+
+/* --- Location ------------------------------------------------------------ */
+
+.location h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.location__address {
+  margin-top: 0.6rem;
+  color: var(--ink-soft);
+}
+
+.map {
+  margin-top: 1.25rem;
+  border: 1px solid var(--rule);
+}
+
+.map__frame {
+  width: 100%;
+  height: 22rem;
+  border: 0;
+}
+
+.location__link {
+  margin-top: 0.9rem;
+  font-size: 0.9375rem;
+}
+
+/* --- Footer -------------------------------------------------------------- */
+
+.site-footer {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: var(--gap) 0 3rem;
+  border-top: 1px solid var(--rule);
+  margin-top: var(--gap);
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* --- Small screens ------------------------------------------------------- */
+
+@media (max-width: 30rem) {
+  :root {
+    --gap: 2.25rem;
+  }
+
+  body {
+    padding: 0 1.25rem;
+  }
+
+  .site-header {
+    padding-top: 3rem;
+  }
+
+  .map__frame {
+    height: 17rem;
+  }
+}
