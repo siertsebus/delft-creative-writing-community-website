@@ -133,7 +133,7 @@ a:hover {
 }
 
 /* Rule fades out at both ends rather than stopping abruptly. */
-.site-header::after {
+/* .site-header::after {
   content: "";
   display: block;
   width: 8.5rem;
@@ -146,7 +146,7 @@ a:hover {
     var(--rule-strong) 90%,
     transparent
   );
-}
+} */
 
 /* --- Layout -------------------------------------------------------------- */
 
@@ -203,6 +203,11 @@ h2 + p {
 
 .prose em {
   font-style: italic;
+}
+
+.prose strong {
+  font-style: bold;
+  background-color: rgba(255, 255, 0, 0.7);
 }
 
 /* --- Location ------------------------------------------------------------ */
