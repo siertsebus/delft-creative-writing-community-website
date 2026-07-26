@@ -9,14 +9,13 @@ A one-page static site for the Delft Writing Group. Plain HTML, CSS and JavaScri
 index.html          the whole page
 css/styles.css      styling and design tokens
 js/main.js          entry point, page setup
-js/hero-image.js    shows the hero image or its placeholder
 assets/             images
 ```
 
 ## Adding the header image
 
-Save the picture as `assets/hero.jpg`. It appears automatically. Until then, a
-plain "Image coming soon" box is shown instead of a broken image.
+Save the picture as `assets/hero.jpg`. Until that file exists, the browser shows
+its usual broken-image icon there.
 
 Landscape works best (roughly 3:2). Around 1600px wide is plenty; anything much
 larger just makes the page slower to load.

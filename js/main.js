@@ -29,7 +29,6 @@
    */
   function init() {
     renderCurrentYear();
-    HeroImage.init(document.querySelector('.hero'));
   }
 
   if (document.readyState === 'loading') {
