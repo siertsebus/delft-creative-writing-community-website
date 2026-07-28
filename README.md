@@ -1,29 +1,26 @@
 # Delft Creative Writing Community
 
-A one-page static site for the Delft Creative Writing Community. Plain HTML, CSS and JavaScript
-— no build step, no dependencies.
+A one-page static site for the Delft Creative Writing Community.
 
 ## Structure
 
 ```
 index.html          the whole page
-css/styles.css      styling and design tokens
-js/main.js          entry point, page setup
+css/styles.css      styling of the page
+js/main.js          code that updates the year in the footer automatically
 assets/             images
 ```
-
 
 ## Viewing it locally
 
 Open `index.html` in a browser.
 
-## Editing the text
+## Two ways of making edits to the website
 
-All the text lives directly in `index.html`.
+#### 1. Edit the website directly on GitHub
+If you have the correct access rights, you can edit the website text and styling
+directly on GitHub. This is the easiest way to make small edits. Just navigate to the
+file you want to edit, click the pencil icon, make your changes, and then commit them.
 
-## Editing the image
-
-Save the picture as `assets/hero.jpg`.
-
-Landscape works best (roughly 3:2). Around 1600px wide is plenty; anything much
-larger just makes the page slower to load.
+#### 2. Edit the website locally via Git
+If you are familiar with [Git](https://git-scm.com/), and you want to make more extensive edits, you can clone the repository and edit the files locally. After making your changes, you can push them back to GitHub.
